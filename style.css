@@ -1,24 +1,31 @@
 @charset "utf-8";
 
+
+body  {
+    font-family: 'メイリオ',
+    'Hiragino Kaku Gothic Pro', sans-serif
+}
+
 .site h1 {
  font-size: 30px;
  margin: 0;
 }
 
-.site p {
-    margin: 0;
-    font-size: 12px;
+.site h1 a {
+    color: #000;
+    text-decoration: none;
 }
 
-.site  h1 a {
-    text-decoration: none;
-    color: #000;
-}
 
 .kiji  h1 {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 36px;
+}
+
+.kiji img {
+    max-width: 100%;
+    height: auto;
 }
 
 .site p {
@@ -34,12 +41,171 @@
 
 .menu li a {
     display: block;
-    padding: 5px;
+    padding: 15px;
     color: #000;
     font-size: 14px;
     text-decoration: none;
 }
 
 .menu li a:hover {
-    background-color: #eee;
+    background-color: #75dbe7;
 }
+
+.menu ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.menu li {
+    float: left;
+    width: auto;
+}
+
+.sidemenu {
+    margin-bottom: 30px;
+}
+
+.sidemenu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidemenu li a {
+    display: block;
+    padding: 5px;
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.sidemenu h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: dotted 2px #ddd;
+    color: #666;
+    font-size: 18px;
+}
+
+.osusume {
+    margin-bottom: 30px;
+}
+
+.osusume ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.osusume li a {
+    display: block;
+    padding: 5px;
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.osusume h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: dotted 2px #ddd;
+    color: #666;
+    font-size: 18px;
+}
+
+.nikki ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nikki li a {
+    display: block;
+    padding: 5px;
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.nikki h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: dotted 2px #ddd;
+    color: #666;
+    font-size: 18px;
+}
+
+.copyright  p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.box2 {
+    background-color: #7cbac1;
+}
+
+.box5 {
+    border-top: solid 1px #ddd;
+}
+
+.box1 {
+    padding: 8px 0;
+}
+
+.box3 {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.box4 {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.box5 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* 599px以下 */
+@media (max-width: 599px) {
+
+.menu li a {
+    padding: 10px 3px;
+    font-size: 11px;    
+}
+
+}
+
+/* 600~767px */
+@media (min-width: 600px) and (max-width: 767px) {
+
+}
+/* 768px以上 */
+@media (min-width: 768px) {
+
+.boxA:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.box3 {
+    float: left;
+    width: 70%;
+    padding-right: 50px;
+    box-sizing: border-box;
+}
+
+.box4 {
+    float: left;
+    width: 30%;
+}
+
+/* 1040px以上 */
+@media (min-width: 1040px) {
+
+}
+
