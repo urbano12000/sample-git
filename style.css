@@ -362,6 +362,105 @@ body  {
     font-size: 12px;
 }
 
+/* 概要 */
+
+.top {
+    max-width: auto;
+}
+
+
+
+.gaiyou {
+    margin-bottom: 20px;
+}
+
+.gaiyou h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 22px;
+    margin-left: 15px;
+}
+
+.gaiyou p {
+    margin: 0 15px 15px 15px;
+    font-size: 14px;
+}
+
+.gaiyou a {
+    display: block;
+    border: solid 1px #ddd;
+    color: #000;
+    text-decoration: none;
+}
+
+.gaiyou a:hover {
+    box-shadow: 0 0 10px #ddd;
+}
+
+.gaiyou img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+    margin-bottom: 15px;
+    vertical-align: bottom;
+}
+
+/* 続きを読む */
+
+.more {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #3077be;
+    color: #fff;
+}
+
+.more i {
+    margin-left: 10px;
+}
+
+.pagenation {
+    text-align: center;
+}
+
+.pagenation  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block
+}
+
+.pagenation li a {
+    display: block;
+    padding: 5px 10px;
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+    border: solid 1px #aaa;
+    margin: 0 5px;
+}
+
+.pagenation li a.active {
+    background-color: #ccc;
+}
+
+.pagenation li a:hover {
+    background-color: #eee;
+}
+
+.pagenation ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.pagenation li {
+    float: left;
+    width: auto;
+}
+
+
+
+
 .copyright  p {
     margin: 0;
     color: #666;
@@ -393,6 +492,46 @@ body  {
 .box5 {
     padding-top: 15px;
     padding-bottom: 15px;
+}
+
+.top .boxA {
+    padding: 20px 0;
+}
+
+/* ピックアップ */
+.pickup h1 {
+    font-size: 30px;
+}
+
+/* バッジ */
+
+.badge {
+    width: 120px;
+    height: 120px;
+    background-color: #00a0e9;
+    color: #fff;
+    padding-top: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 60px;
+    box-shadow: 0 0 4px #aaa;
+}
+
+.badge i {
+    display: block;
+    font-size: 40px;
+}
+
+/* バッジの表示位置 */
+
+.pickup {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 44%;
+    right: -15px;
 }
 
 /* 599px以下 */
@@ -437,11 +576,58 @@ body  {
 }
 
 }
+/* 600px以上 */
+@media (min-width: 600px) {
+
+.boxA-1::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.boxA-1  {
+    float: left;
+    width: 50%;
+}
+
+/* boxA-1 */
+
+.boxA-1 img {
+    max-width: 100%;
+    padding-right: 15px;
+}
+
+.boxA-1 h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 22px;
+    margin-left: 15px;    
+}
+
+.boxA-1 p {
+    margin: 0 15px 15px 15px;
+    font-size: 14px;   
+}
+
+.boxA-1 a {
+    display: block;
+    border: solid 1px #ddd;
+    color: #000;
+    text-decoration: none;
+}
+
+
+}
 
 /* 600~767px */
 @media (min-width: 600px) and (max-width: 767px) {
 
-.box4:after {
+
+.badge {
+    top: 30%;
+    right: 15px;
+}
+.box4::after {
     content: "";
     display: block;
     clear: both; 
@@ -465,7 +651,10 @@ body  {
 /* 768px以上 */
 @media (min-width: 768px) {
 
-.boxA:after {
+
+
+
+.boxA::after {
     content: "";
     display: block;
     clear: both;
@@ -493,4 +682,5 @@ body  {
 }
 
 }
+
 
