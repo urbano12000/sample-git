@@ -338,7 +338,7 @@ body  {
     font-size: 18px;
 }
 
-.nikki a:after {
+.nikki a::after {
     content: "";
     display: block;
     clear: both;
