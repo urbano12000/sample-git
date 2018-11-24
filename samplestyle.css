@@ -14,8 +14,12 @@ body  {
 }
 
 .site a {
-    color: #000;
+    color: #fff;
     text-decoration: none;
+}
+
+.site img {
+    border: none;
 }
 
 /* ナビゲーション */
@@ -38,7 +42,7 @@ body  {
 }
 
 .menu li a {
-    padding: 5px;
+    padding: 10px 15px;
     text-decoration: none;
     display: block;
     color: #000;
@@ -57,6 +61,12 @@ body  {
 
 /* お知らせ */
 
+
+.news {
+    padding: 20px;
+    border: solid 5px #ddd;
+}
+
 .news h1 {
     font-size: 18px;
     margin-top: 0;
@@ -65,7 +75,7 @@ body  {
 }
 
 .news ul {
-    font-style: none;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -84,9 +94,84 @@ body  {
 }
 
 .news time {
-    margin-right: 10px;
+    float: left;
+    width: 60px;
     color: #888;
     font-weight: bold;
+}
+
+.news a::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.text {
+    float: none;
+    width: auto;
+    margin-left: 60px;
+}
+
+/* SNSメニュー */
+
+.follow ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.follow li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.follow a:hover {
+    opacity: 0.8;
+}
+
+.follow-tw{background-color: #63bafb}
+.follow-fb{background-color: #5288f7}
+.follow-gp{background-color: #f65d4a}
+
+.follow i {
+    margin-right: 10px;
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+/* 補足説明 */
+.follow p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ddd;
+    font-size: 14px;
+    text-align: center;
+}
+
+.follow-info {
+    position: relative;
+	background: #ddd;   
+}
+
+.follow-info::after {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(221, 221, 221, 0);
+	border-top-color: #ddd;
+	border-width: 15px;
+	margin-left: -15px;    
 }
 
 /* コピーライト */
@@ -95,6 +180,37 @@ body  {
     color: #666;
     font-size: 14px;
 }
+
+/* コピーライトのデザイン */
+.box5 {
+    background-color: #ddd;
+    padding: 15px;
+}
+
+/* ボックスの配置 */
+.boxA {
+    padding: 20px 15px 10px 15px;
+}
+
+.box4 {
+    padding: 20px 15px;
+    background-color: #e8e8c4;
+}
+
+.box4-1 {
+    padding-bottom: 20px;
+}
+
+/* 599px以下に適応する */
+@media (max-width: 599px) {
+/* ナビゲーション */
+.menu li a {
+    padding: 10px 7px;
+    font-size: 11px;
+}
+}
+
+
 
 /* 768px以上に適応する */
 @media (min-width: 768px) {
@@ -109,12 +225,46 @@ body  {
 
 .box1 {
     float: left;
-    width: 50%;
+    width: auto;
 }
 
 .box2 {
-    float: left;
-    width: 50%;
+    float: right;
+    width: auto;
 }
 
+/* お知らせとSNSを横並びに */
+
+
+.box4::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.box4-1 {
+    float: left;
+    width: 70%;
+    padding-right: 35px;
+    box-sizing: border-box;
+}
+
+.box4-2 {
+    float: left;
+    width: 30%;
+}
+
+}
+/* 1190px以上に適応する */
+@media (min-width: 1190px) {
+
+.box3, .box4, .boxA-inner, .box5-inner {
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boxA {
+    margin-bottom: 20px;
+    border-bottom: solid 1px #ddd;
+}
 }
