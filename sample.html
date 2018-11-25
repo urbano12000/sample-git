@@ -9,6 +9,14 @@
     <link href = 'http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css' rel = "stylesheet">
     <!-- <link rel = "stylesheet" href="grid-guide.css"> -->
     <link rel = "stylesheet" href="samplestyle.css">
+    <script src = "http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+    $(function() {
+      $("#menubtn").click(function(){
+        $("#menu").slideToggle();
+      });
+    });
+    </script>
 </head>
 
 <body>
@@ -21,7 +29,10 @@
   </div>
 
   <div class = "box2">
-    <nav class="menu">
+    <button type = "button" id = "menubtn">
+      <i class="fa fa-bars"></i><span>MENU</span>
+    </button>
+    <nav class="menu"　id = "menu">
       <ul>
         <li><a href="#">トップ</a></li>
         <li><a href="#">沿革</a></li>
@@ -35,7 +46,46 @@
   </div>
 
   <div class = "box3">
+    <div class="top">
     <img src="img/05/header.jpg" alt="" class="topimg">
+    <p class="catch">TimeSeitchはデータの蓄積と<br>
+    分析・解析を行います。</p>
+    </div>
+  </div>
+
+  <div class="box6">
+  <div class="box6-1">
+    <div class="gaiyou">
+    <a href="#">  
+      <i class="fa fa-database"></i>
+      <h1>データの分析・解析</h1>
+      <p>目的に応じて様々な角度から<br>
+      データを分析・解析します。</p>
+    </a>
+    </div>
+  </div>
+
+  <div class = "box6-2">
+    <div class="gaiyou">
+    <a href="#">
+      <i class="fa fa-bar-chart-o"></i>
+      <h1>わかりやすい視聴覚化</h1>
+      <p>解析結果は分かりやすい記述方法をとり<br>
+      万人受けを狙います。</p>
+    </a>
+    </div>
+  </div>
+
+  <div class="box6-3">
+    <div class="gaiyou">
+    <a href="#">
+      <i class="fa fa-envelope"></i>
+      <h1>24時間サポート</h1>
+      <p>深夜の時間や早朝の時間でもいつでもどこでも
+      対応させて頂きます。</p>
+    </a>
+    </div>
+  </div>
   </div>
   
   <div class = "box4">

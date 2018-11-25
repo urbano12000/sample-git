@@ -22,42 +22,74 @@ body  {
     border: none;
 }
 
-/* ナビゲーション */
 
-.menu ul {
-    margin: 0;
-    padding: 0px;
-    list-style: none;
-}
 
-.menu ul::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.menu li {
-    float: left;
-    width: auto;
-}
-
-.menu li a {
-    padding: 10px 15px;
-    text-decoration: none;
-    display: block;
-    color: #000;
-    font-size: 14px;
-}
-
-.menu li a:hover {
-    background-color: #eee;
-}
-
+/* ヘッダーの画像 */
 .topimg {
     max-width: 100%;
     height: auto;
     vertical-align: bottom;
 }
+
+/* キャッチコピー */
+
+.catch {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 28px;
+}
+
+/* ヘッダー画像にキャッチコピーを重ねる */
+.top {
+    position: relative;
+}
+
+.catch {
+    position: absolute;
+    bottom: 7%;
+    left: 3%;
+}
+
+
+/* 概要 */
+.gaiyou h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 5px 0;
+}
+
+.gaiyou p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    padding: 15px 0;
+    background-color: #524e3c;
+}
+
+.gaiyou a {
+    display: block;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.gaiyou a:hover {
+    opacity: 0.8;
+}
+
+.gaiyou i {
+    font-size: 38px;
+    display: block;
+    padding: 40px 0;
+}
+
+.gaiyou .fa-database{background-color: #bfbd13;}
+.gaiyou .fa-bar-chart-o {background-color: #c58839;}
+.gaiyou .fa-envelope {background-color: #859f46;}
 
 /* お知らせ */
 
@@ -194,11 +226,28 @@ body  {
 
 .box4 {
     padding: 20px 15px;
-    background-color: #e8e8c4;
 }
 
 .box4-1 {
     padding-bottom: 20px;
+}
+
+.box6 {
+    padding: 20px 15px 0 15px;
+}
+
+.box6-1, .box6-2, .box6-3 {
+    padding-bottom: 10px;
+}
+
+/* 359以下に適応 */
+@media (max-width: 359px){
+/* サイト名 */
+
+.site img {
+    width: 225px;
+    height: auto;
+}
 }
 
 /* 599px以下に適応する */
@@ -208,6 +257,72 @@ body  {
     padding: 10px 7px;
     font-size: 11px;
 }
+
+.catch {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+}
+
+/* 767以下に対応する */
+
+@media (max-width: 767px) {
+/* トグルボタン */
+
+#menubtn {
+    padding: 6px 12px;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#menubtn:hover {
+    background-color: #ddd;
+}
+
+#menubtn:focus {
+    outline: none;
+}
+
+#menubtn span {
+    display: inline-block;
+    text-indent: -9999px;
+}
+
+#menubtn i {
+    color: #888;
+    font-size: 18px;
+}
+
+/* ナビゲーション(縦並び） */
+
+#menu {
+    display: none;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0px;
+    list-style: none;
+}    
+
+.menu li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    color: #000;
+    font-size: 14px;
+}
+
+.menu li a:hover {
+    background-color: #eee;
+}
+
+
 }
 
 
@@ -215,6 +330,10 @@ body  {
 /* 768px以上に適応する */
 @media (min-width: 768px) {
 
+/* トグルボタン */
+#menubtn {
+    display:none;
+}
 
 /* box1とbox2を横に並べる　 */
 .boxA::after {
@@ -231,6 +350,41 @@ body  {
 .box2 {
     float: right;
     width: auto;
+}
+
+/* ナビゲーション */
+
+
+#menu {
+    display: block !important;
+}
+.menu ul {
+    margin: 0;
+    padding: 0px;
+    list-style: none;
+}
+
+.menu ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.menu li {
+    float: left;
+    width: auto;
+}
+
+.menu li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    color: #000;
+    font-size: 14px;
+}
+
+.menu li a:hover {
+    background-color: #eee;
 }
 
 /* お知らせとSNSを横並びに */
@@ -253,11 +407,42 @@ body  {
     width: 30%;
 }
 
+/* box6を横に並べる */
+.box6::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.box6-1 {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+    box-sizing: border-box;
+    
+}
+
+
+.box6-2 {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+    box-sizing: border-box;
+    
+}
+
+.box6-3 {
+    float: left;
+    width: 32%;
+    box-sizing: border-box;
+    
+}
+
 }
 /* 1190px以上に適応する */
 @media (min-width: 1190px) {
 
-.box3, .box4, .boxA-inner, .box5-inner {
+.box3, .box4, .boxA-inner, .box5-inner, .box6 {
     width: 1140px;
     margin-left: auto;
     margin-right: auto;
@@ -267,4 +452,6 @@ body  {
     margin-bottom: 20px;
     border-bottom: solid 1px #ddd;
 }
+
+
 }
